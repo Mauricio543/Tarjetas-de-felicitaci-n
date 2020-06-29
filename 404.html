@@ -1,1 +1,195 @@
 permalink: /404.html
+<! DOCTYPE html >
+< html  lang = " es " >
+< cabeza >
+	< meta  charset = " utf-8 " >
+	 < Enlace  rel = " hoja de estilo " href =" https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css " integridad =" SHA384-Gn5384xqQ1aoWXA + 058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW / dAiS6JXm " crossorigin =" anónimo " >
+    < Guión  src = " https://code.jquery.com/jquery-3.4.1.slim.min.js " integridad =" SHA384-J6qa4849blE2 + poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ + n " crossorigin =" anónimo " > </ escritura >
+	< Guión  src = " https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integridad =" sha384-Q6E9RHvbIyZFJoft + 2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin =" Anónimo " > </ script >
+	< Guión  src = " https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integridad =" sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin =" Anónimo " > </ script de >
+    < link  rel = " stylesheet " href = " style.css " >
+    < link  href = " https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto+Condensed:wght@300;400&display=swap " rel = " stylesheet " >
+    < link  href = " https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css " rel = " stylesheet " >
+    < script  src = " https://kit.fontawesome.com/6b103e2a4f.js " crossorigin = " anónimo " > </ script >
+    < título > Tarjetas de felicitación </ título >
+    < link  href = " https://fonts.googleapis.com/css2?family=Pangolin&display=swap " rel = " stylesheet " >
+    < link  href = " https://fonts.googleapis.com/css2?family=Piedra&display=swap " rel = " stylesheet " >
+    < link  href = " https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap " rel = " stylesheet " >
+	< título > Tarjetas de Felicitaciones </ título >
+</ cabeza >
+< body  background = " img / fondo.jpg " >
+   
+< cuerpo >
+	< encabezado >
+		< centro > < h1 > < font  color = " Blue " > Crea tu tarjeta de felicitación </ font > </ h1 > </ center >
+	</ header >
+
+	< encabezado >
+		< img  src = " img / Corazón.png " style = " width: 2%; " > < h3 > Elige un tema: </ h3 >
+			< p  align = " center " >
+				 < form  action = " /action_page.php " >
+        		< input  type = " radio " id = " Valentin " name = " cards " value = " Valentin " style = " margin: 1rem; " onclick = " cambiarimg1 (); " >
+				< label  for = " Valentin " > < b > < font  color = " # 6E7A71 " style = " font-family: 'Pangolin', cursiva; " > San valentin </ font > </ b > </ label >
+        		< input  type = " radio " id = " Cumpleaños " name = " cards " value = " Cumpleaños " style = " margin: 1rem; " onclick = " cambiarimg2 (); " >
+        		< label  for = " Cumpleaños " > < b > < font  color = " # 6E7A71 " style = " font-family: 'Pangolin', cursiva; " > Feliz cumpleaños </ font > </ b > </ label >
+        		< input  type = " radio " id = " Motivacion " name = " cards " value = " Motivacion " style = " margin: 1rem; " onclick = " cambiarimg3 (); " >
+        		< label  for = " Motivacion " > < b > < font  color = " # 6E7A71 " style = " font-family: 'Pangolin', cursiva; " > Motivación </ font > </ b > </ label >
+        		</ form >
+			</ p >
+		< Sección > < br >
+			< div  style = " margin-left: 2rem; " >
+		< img  src = " img / foto.jpg " style = " ancho: 5%; " >
+		< Etiqueta > < b > Elige una imagen </ b > </ etiqueta > < br >
+		</ div >
+        < Cifra  de clase = " text-centro " > < br >
+        < div  id = " muestras " >
+        < img  src = " img / san1.jpg " width = " 300px " height = " 300px " id = " img1 " name = " primera " onclick = " muestra ('primera'); " alt = " Personaliza tu tarjeta " >
+        < img  src = " img / feliz1.jpg " width = " 300px " height = " 300px " style = " margin-left: 50px " id = " img2 " name = " segunda " onclick = " muestra ('segunda'); " alt =" Personaliza tu tarjeta " >
+        < img  src = " img / moti1.jpeg " width = " 300px " height = " 300px " style = " margin-left: 50px " id = " img3 " name = " tercera " onclick = " muestra ('tercera'); " alt =" Personaliza tu tarjeta " >
+        </ div >
+        < h3  id = " descripcion " > </ h3 >
+        </ figura >
+		</ sección >
+		< style  type = " text / css " >
+        # visor   { text-align : center; margen : 0  20 px }
+        # pantalla   { ancho : 500 px ; relleno : 10 px ; borde : 8 px doble # 26990F ;
+            color de fondo : # f4f0c9 ; }
+        # box { ancho : 1000 px ; relleno : 30 px ;}
+    </ estilo >
+    < centro >
+    < label  for = " favcolor " > < b > Escoge un color de borde: </ b > </ label >
+    < Entrada  tipo = " de color " nombre =" colorB " ID =" favcolor " valor =" # 26990F " onchange =" cambiarcolor (Pantalla); " > < br >
+    < label  for = " favcolor " > < b > Escoge un color de fondo: </ b > </ label >
+    < input  type = " color " name = " colorB " id = " backcolor " value = " # f4f0c9 " onchange = " changecolor (pantalla); " >
+    < div  id = " color " >
+        < input  type = " button " value = " Borde punteado " style = " background: # 14B9E9; border: 0; " onclick = " setBorder (6); " style = " margin: 1rem; " />
+        < input  type = " button " value = " Borde con lineas " style = " background: # D80707; border: 0; " onclick = " setBorder1 (6); " style = " margin: 1rem; " />
+        < input  type = " button " value = " Borde solido " style = " background: # A410EE; border: 0; " onclick = " setBorder2 (6); " style = " margin: 1rem; " />
+        < input  type = " button " value = " Borde doble " style = " background: # 251F8A; border: 0; " onclick = " setBorder3 (6); " style = " margin: 1rem; " />
+    </ div >
+	</ center >
+	</ header >
+
+< sección  >
+	< div  style = " margin-left: 10rem; " >
+        < img  src = " img / lapiz.jpg " width = " 5% " >
+        < Etiqueta > < b > Titulo: </ b > </ etiqueta > < br > < br >
+        < formulario >
+        < input  type = " text " style = " margin-left: 9rem; " id = " titulo " size = " 30 " placeholder = " Capture un título " onchange = " document.getElementById ('txtTitulo'). innerHTML = titulo = this.value " > < br >
+        < Br > < entrada  tipo =" texto " estilo =" margin-left: 9rem; " ID =" subtitulo " tamaño =" 30 " marcador de posición =" Capture ONU subtitulo " onchange =" . Document.getElementById ( 'txtSubtitulo') innerHTML = subtitulo = this.value " > < br >
+        < Br > < entrada de  tipo =" texto " estilo =" margin-left: 9rem; " ID =" autor " tamaño =" 30 " marcador de posición =" ¿Cuál es tu nombre? " Onchange =" document.getElementById ( 'txtAutor' ) .innerHTML = autor = this.value " > < br >
+        </ form >
+        < formulario >
+         < textarea  name = " texto " rows = " 7 " cols = " 40 " style = " margin-left: 30rem; margin-top: -200px; " placeholder = " Escriba un mensaje " onchange = " document.getElementById ('txtMensaje ') .innerHTML = mensaje = this.value " > </ textarea >
+        </ Forma > < br >
+        </ div >
+</ sección >
+	< centro > < input  type = " button " name = " Enviar " value = " Generar " onclick = " generar (); confetti.start (); color (box); " > </ center >
+        < centro > < etiqueta  para = " favcolor " > < b > Color de fondo: </ b > </ etiqueta >
+        < input  type = " color " name = " colorB " id = " background " value = " # f4f0c9 " onchange = " changecolor (box); " > </ center >
+        < centro > < etiqueta  para = " favcolor " > < b > Color de letra: </ b > </ etiqueta >
+        < input  type = " color " name = " colorB " id = " letra " value = " # 5A2B22 " onchange = " color (box); " > </ center >
+
+ 		< section  id = " box " style = " display: none; margin-left: 150px " class = " Impresion " >
+ 		< div  id = " tarjeta " >
+			< centro > < h1  id = " txtTitulo " class = " titulo " > </ h1 >
+			< h3  id = " txtSubtitulo " class = " titulo " > </ h3 > </ center >
+			< centro >
+            < div  id = " visor " > < img  src = " fondo.png " alt = "" id = " pantalla " />
+            </ div >
+            </ center >
+            < centro > < div  class = " cuerpo " > < p  id = " txtMensaje " > </ p > </ div > </ center >
+		</ div >
+	   < div  class = " autor " >
+			< p  id = " txtAutor " class = " text-right " > </ p >
+		</ div >
+		< div  class = " fecha " >
+			< p  id = " fecha " > </ p >
+		</ div >
+	</ sección >
+	< script  type = " text / javascript " >
+        función  cambiarimg1 ( ) {
+            documento . getElementById ( 'img1' ) . src = "img / san1.jpg" ;
+            documento . getElementById ( 'img2' ) . src = "img / san2.jpg" ;
+            documento . getElementById ( 'img3' ) . src = "img / san3.jpg" ;
+            documento . getElementById ( 'caja' ) . estilo . fontFamily = 'Pangolin' ,  cursiva ;
+            
+        }
+        función  cambiarimg2 ( ) {
+            documento . getElementById ( 'img1' ) . src = "img / feliz1.jpg" ;
+            documento . getElementById ( 'img2' ) . src = "img / feliz2.jpg" ;
+            documento . getElementById ( 'img3' ) . src = "img / feliz3.jpg" ;
+            documento . getElementById ( 'caja' ) . estilo . fontFamily = 'Piedra' ,  cursiva ;
+            documento . getElementById ( 'caja' ) . estilo . color = "# 045757" ;
+        }
+        función  cambiarimg3 ( ) {
+            documento . getElementById ( 'img1' ) . src = "img / moti1.jpeg" ;
+            documento . getElementById ( 'img2' ) . src = "img / moti2.jpg" ;
+            documento . getElementById ( 'img3' ) . src = "img / moti3.jpg" ;
+            documento . getElementById ( 'caja' ) . estilo . fontFamily = 'Flor independiente' ,  cursiva ;
+            documento . getElementById ( 'caja' ) . estilo . color = "# 045757" ;
+        }
+        función  fuente ( ) {
+            documento . getElementById ( 'txtTitulo' ) . estilo . fontFamily = "Comic Sans MS" ;
+            documento . getElementById ( 'txtSubtitulo' ) . estilo . fontFamily = "Comic Sans MS" ;
+            documento . getElementById ( 'txtMensaje' ) . estilo . fontFamily = "Comic Sans MS" ;
+            documento . getElementById ( 'txtAutor' ) . estilo . fontFamily = "Comic Sans MS" ;
+            documento . getElementById ( 'fecha' ) . estilo . fontFamily = "Comic Sans MS" ;
+        }
+        función  muestra ( num )  {
+         imagen  =  documento . imágenes [ num ] . src
+         comentario  =  documento . imágenes [ num ] . alt
+         grande  =  documento . imágenes [ "pantalla" ]
+         texto  =  documento . getElementById ( "descripcion" )
+         Grande . src  =  imagen
+         texto . innerHTML  =  comentario
+         }
+        
+         función  cambiarcolor ( pantalla ) {
+        let  color  =  document . getElementById ( "favcolor" ) . valor ;
+        documento . getElementById ( "pantalla" ) . estilo . borderColor  =  color ;
+ 
+    }
+         función  changecolor ( pantalla ) {
+            let  color  =  document . getElementById ( "color de fondo" ) . valor ;
+        documento . getElementById ( "pantalla" ) . estilo . backgroundColor  =  color ;
+    }
+         función  changecolor ( caja ) {
+            let  color  =  document . getElementById ( "fondo" ) . valor ;
+        documento . getElementById ( "caja" ) . estilo . backgroundColor  =  color ;
+    }
+         color de función ( cuadro ) {
+            let  color  =  document . getElementById ( "letra" ) . valor ;
+            documento . getElementById ( 'txtTitulo' ) . estilo . color =  color ;
+            documento . getElementById ( 'txtSubtitulo' ) . estilo . color = color ;
+            documento . getElementById ( 'txtMensaje' ) . estilo . color = color ;
+            documento . getElementById ( 'txtAutor' ) . estilo . color = color ;
+            documento . getElementById ( 'fecha' ) . estilo . color = color ;
+        }
+        función  setBorder ( x ) {
+        documento . getElementById ( 'pantalla' ) . estilo . border = "punteado fino" ;
+        documento . getElementById ( 'pantalla' ) . estilo . borderWidth = x + "px" ;   
+    }
+        función  setBorder1 ( x ) {
+        documento . getElementById ( 'pantalla' ) . estilo . borde = "discontinuo" ;
+        documento . getElementById ( 'pantalla' ) . estilo . borderWidth = x + "px" ;     
+    }
+     función  setBorder2 ( x ) {
+        documento . getElementById ( 'pantalla' ) . estilo . borde = "sólido" ;
+        documento . getElementById ( 'pantalla' ) . estilo . borderWidth = x + "px" ;     
+    }
+     función  setBorder3 ( x ) {
+        documento . getElementById ( 'pantalla' ) . estilo . borde = "doble" ;
+        documento . getElementById ( 'pantalla' ) . estilo . borderWidth = x + "px" ;     
+    }
+     función  generar ( ) {
+        documento . getElementById ( "caja" ) . estilo . display = "bloque" ;
+    }
+          var  meses  = nueva  matriz ( "Enero" ,  "Febrero" ,  "Marzo" ,  "Abril" ,  "Mayo" ,  "Junio" ,  "Julio" ,  "Agosto" ,  "Septiembre" ,  "Noviembre" ,  "Diciembre" ) ;
+        var  dias = matriz nueva  ( "Domingo" , "Lunes" , "Martes" , "Miércoles" , "Jueves" , "Viernes" , "Sábado" ) ;
+        var  f =  nueva  Fecha ( ) ;
+        documento . getElementById ( "fecha" ) . innerHTML =  "Hoy es" + dias [ f . getDay ( ) ] + "," + [ f . getDate ( ) ] + "de" +  meses [ f . getMonth ( ) ] + "del" + f . getFullYear ( ) ;
+    </ script >
+
+</ cuerpo >
+</ html >
